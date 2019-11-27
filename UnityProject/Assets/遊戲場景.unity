@@ -478,7 +478,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579084418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09c2abb7279d5b34c85fe4781cd9f7c0, type: 3}
   m_Name: 
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579084418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d4366b4d52f4d94d80ff9cfc05aaa32, type: 3}
   m_Name: 
@@ -1691,8 +1691,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6392cbd43a3447940924bee6c0a87df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: 100
+  jump: 250
   isDead: 0
+  angle: 3
+  goScore: {fileID: 177436647}
+  goGM: {fileID: 1552742087}
+  r2d: {fileID: 1981344852}
 --- !u!50 &1981344852
 Rigidbody2D:
   serializedVersion: 4
@@ -1708,7 +1712,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

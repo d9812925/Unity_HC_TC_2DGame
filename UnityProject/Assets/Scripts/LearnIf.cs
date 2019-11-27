@@ -12,11 +12,11 @@ public class LearnIf : MonoBehaviour
         }
         else if(combo >= 100 && combo <150)
         {
-        print("dmgx5")
+            print("dmgx5");
         }
         else if(combo >=150 && combo < 200)
         {
-        print("dmgx10")
+            print("dmgx10");
         }
     }
 }
