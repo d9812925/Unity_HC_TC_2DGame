@@ -10,6 +10,13 @@ public class Bird : MonoBehaviour
 
     public GameObject goScore, goGM;
     public Rigidbody2D r2d;
+    public GameManager gm;
+
+
+    [Header("Sound")]
+    public AudioSource aud;
+    public AudioClip soundJump, soundHit, soundScore;
+    
 
     private void Update()
     {
@@ -22,7 +29,16 @@ public class Bird : MonoBehaviour
     /// 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Dead();
+        if (collision.gameObject.name=="水管 - 上"|| collision.gameObject.name == "水管 - 下")
+        {
+            Dead();
+            aud.PlayOneShot(soundHit);
+        }
+        if (collision.gameObject.name=="PointArea")
+        {
+            gm.AddScore();
+            aud.PlayOneShot(soundScore);
+        }
     }
 
     private void Jump()
@@ -37,7 +53,7 @@ public class Bird : MonoBehaviour
             r2d.Sleep();
             r2d.gravityScale = 1;
             r2d.AddForce(new Vector2(0, jump));
-
+            aud.PlayOneShot(soundJump);
         }
         r2d.SetRotation(angle * r2d.velocity.y);
     }
@@ -51,7 +67,11 @@ public class Bird : MonoBehaviour
     /// </summary>
     private void Dead()
     {
+        
         isDead = true;
+
+
+        Ground.speed = 0;
     }
 
     /// <summary>

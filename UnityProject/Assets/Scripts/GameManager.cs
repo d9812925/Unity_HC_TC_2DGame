@@ -8,12 +8,13 @@ public class GameManager : MonoBehaviour
     public int scoreHeight;
     [Header("水管群組")]
     public GameObject pipe; // GameObject 可以存放場景上的物件或專案內的預製物
-
+    [Header("結束畫面")]
+    public GameObject goFinal;
     /// <summary>
     /// 加分
     /// </summary>
     /// <param name="add">要添加的分數，預設為 1</param>
-    private void AddScore(int add = 1)
+    public void AddScore(int add = 1)
     {
 
     }
@@ -29,9 +30,10 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 遊戲結束
     /// </summary>
-    private void GameOver()
+    public void GameOver()
     {
-
+        goFinal.SetActive(true);
+        CancelInvoke("SpawnPipe");
     }
 
     /// <summary>
