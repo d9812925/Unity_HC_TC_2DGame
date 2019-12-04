@@ -824,7 +824,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 788235810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1552742088}
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &788235810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,7 +1123,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1460061673}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1552742088}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1460061673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,6 +1219,8 @@ MonoBehaviour:
   scoreHeight: 0
   pipe: {fileID: 1351251538913955929, guid: edc7a81f52ee7e5449b770de15047d38, type: 3}
   goFinal: {fileID: 1962351996}
+  textscore: {fileID: 177436649}
+  texthight: {fileID: 1950420547}
 --- !u!4 &1552742089
 Transform:
   m_ObjectHideFlags: 0

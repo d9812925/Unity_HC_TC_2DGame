@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,13 +12,19 @@ public class GameManager : MonoBehaviour
     public GameObject pipe; // GameObject 可以存放場景上的物件或專案內的預製物
     [Header("結束畫面")]
     public GameObject goFinal;
+
+    public Text textscore;
+    public Text texthight;
+
     /// <summary>
     /// 加分
     /// </summary>
     /// <param name="add">要添加的分數，預設為 1</param>
     public void AddScore(int add = 1)
     {
-
+        score = score + add;
+        textscore.text = score.ToString();
+        SetHeightScore();
     }
 
     /// <summary>
@@ -24,7 +32,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void SetHeightScore()
     {
-
+        if (score > scoreHeight)
+        {
+            PlayerPrefs.SetInt("HighestScore", score);
+        }
     }
 
     /// <summary>
@@ -52,7 +63,16 @@ public class GameManager : MonoBehaviour
         // 實例化 - 生成 (物件)
         Instantiate(pipe, p, Quaternion.identity);
     }
+    public void Replay()
+    {
 
+        SceneManager.LoadScene("遊戲場景");
+    }
+    public void Exit()
+    {
+        Application.Quit();
+
+    }
     private void Start()
     {
         //SpawnPipe();
@@ -60,5 +80,9 @@ public class GameManager : MonoBehaviour
         // Invoke("SpawnPipe", 1.5f);
         // 延遲重複調用("方法名稱"，延遲時間，重複頻率);
         InvokeRepeating("SpawnPipe", 0, 1.8f);
+        scoreHeight = PlayerPrefs.GetInt("HighestScore");
+        texthight.text = scoreHeight.ToString();
     }
+
+
 }

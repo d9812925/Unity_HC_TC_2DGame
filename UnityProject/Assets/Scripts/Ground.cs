@@ -11,7 +11,10 @@ public class Ground : MonoBehaviour
     {
         Move();
     }
-
+    private void Start()
+    {
+        speed = 3f;
+    }
     /// <summary>
     /// 地板的移動方法。
     /// </summary>

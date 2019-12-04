@@ -27,19 +27,24 @@ public class Bird : MonoBehaviour
     /// 小雞跳躍功能。
     /// </summary>
     /// 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name=="水管 - 上"|| collision.gameObject.name == "水管 - 下")
         {
             Dead();
             aud.PlayOneShot(soundHit);
         }
-        if (collision.gameObject.name=="PointArea")
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "PointArea" && !isDead)
         {
             gm.AddScore();
             aud.PlayOneShot(soundScore);
         }
     }
+
 
     private void Jump()
     {
@@ -58,7 +63,10 @@ public class Bird : MonoBehaviour
         r2d.SetRotation(angle * r2d.velocity.y);
     }
 
-
+    private void Start()
+    {
+        Screen.SetResolution(720, 1280, false);
+    }
 
 
 
@@ -67,9 +75,10 @@ public class Bird : MonoBehaviour
     /// </summary>
     private void Dead()
     {
-        
+        if (isDead) return;
+        gm.GameOver();
         isDead = true;
-
+        aud.PlayOneShot(soundHit, 1);
 
         Ground.speed = 0;
     }
