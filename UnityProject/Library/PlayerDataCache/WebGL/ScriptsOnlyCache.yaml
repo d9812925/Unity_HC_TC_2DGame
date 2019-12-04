@@ -63,39 +63,39 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9692}
+      Script: {instanceID: 9694}
     - Class: 114
-      Script: {instanceID: 9856}
+      Script: {instanceID: 9858}
     - Class: 114
-      Script: {instanceID: 9896}
+      Script: {instanceID: 9898}
     - Class: 114
-      Script: {instanceID: 10246}
+      Script: {instanceID: 10248}
     - Class: 114
-      Script: {instanceID: 10304}
+      Script: {instanceID: 10306}
     - Class: 114
-      Script: {instanceID: 10332}
+      Script: {instanceID: 10334}
     - Class: 114
-      Script: {instanceID: 10336}
+      Script: {instanceID: 10338}
     - Class: 114
-      Script: {instanceID: 10428}
+      Script: {instanceID: 10430}
     - Class: 114
-      Script: {instanceID: 10624}
+      Script: {instanceID: 10626}
     - Class: 114
-      Script: {instanceID: 10734}
+      Script: {instanceID: 10736}
     - Class: 114
-      Script: {instanceID: 11052}
+      Script: {instanceID: 11054}
     - Class: 114
-      Script: {instanceID: 11082}
+      Script: {instanceID: 11084}
     - Class: 114
-      Script: {instanceID: 11142}
+      Script: {instanceID: 11144}
     - Class: 114
-      Script: {instanceID: 11238}
+      Script: {instanceID: 11240}
     - Class: 114
-      Script: {instanceID: 11288}
+      Script: {instanceID: 11290}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11632}
+      Script: {instanceID: 11634}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -614,4 +614,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - "Assets/\u904A\u6232\u5834\u666F.unity"
-  playerPath: C:/Users/USER/Documents/GitHub/Unity_HC_TC_2DGame/Birdy-Flu
+  playerPath: C:/Users/USER/Documents/GitHub/Unity_HC_TC_2DGame/Birdy-Flu Web
